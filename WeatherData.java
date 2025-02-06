@@ -41,12 +41,20 @@ public class WeatherData
         {
             if (t>threshold)
             {
-                heatwave++;
+                heatWave++;
+            }
+            else {
+                heatWave = 0;
+            }
+            if (heatWave>max)
+            {
+                max=heatWave;
             }
 
-            if (heatWave>max) max=heatWave;
-            else heatWave=0;
+
         }
+
+
 
         return max;
     }
